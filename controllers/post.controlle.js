@@ -8,6 +8,7 @@ postController.post("/", (req, res) => {
     const newad = new AdModel(ad);
     newad.save();
     res.send({ msg: "ad added" });
+    console.log("testing");
   } catch (error) {
     res.send({ msg: "error while adding add" });
     console.log(error);
