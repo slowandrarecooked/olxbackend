@@ -6,6 +6,7 @@ const browseController = express.Router();
 browseController.get("/", async (req, res) => {
   const queries = req.query;
   let ads = [];
+  console.log("testing");
   if (!queries.length) ads = await AdModel.find();
   if (queries.category) {
     ads.push(await AdModel.find({ category: queries.category }));
